@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImportingImage"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Click select to select images..."
+            android:textColor="#041a03"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_round"
+            android:text="Select"
+            android:textColorHint="@android:color/holo_green_light"
+            android:textSize="20dp" />
+
+    <ImageSwitcher
+        android:id="@+id/imageswitcher"
+        android:layout_width="match_parent"
+        android:layout_height="346dp"
+
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/previous"
+            android:layout_width="138dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Previous" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:text="Next" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Upload to upload images..."
+        android:textSize="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+       android:layout_marginTop="10dp"
+        android:background="@drawable/bg_round"
+        android:text="Upload"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:id="@+id/txt"/>
+
+
+</LinearLayout>

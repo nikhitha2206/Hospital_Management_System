@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Ambulance Service</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_welcome">Ambulance Service</string>
+    <string name="in_case_of_emergency_press_the_above_button">Press the above Button to call</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="todo">TODO</string>
+    <string name="gallery">Gallery</string>
+    <string name="slideshow">Slideshow</string>
+    <string name="tools">Tools</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="camera">Camera</string>
+    <string name="mange">Manage</string>
+    <string name="imort">Import</string>
+    <string name="ambulance_service">Ambulance Service</string>
+</resources>
