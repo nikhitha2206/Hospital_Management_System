@@ -5,8 +5,11 @@ public class PatientDetails  {
     private String address;
 
     public PatientDetails() {
-
-
+    }
+    public PatientDetails(String number,String address)
+    {
+        this.number = number;
+        this.address = address;
     }
     public String getNumber()
     {

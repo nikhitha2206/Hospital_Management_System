@@ -1,36 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    android:background="@drawable/hospital"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
-    <Button
-        android:id="@+id/ambulance"
-        android:layout_width="349dp"
-        android:layout_height="63dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/bg_round"
-        android:text="Ambulance Service"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/oximeter"
-        android:layout_width="302dp"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:background="#C7EAFB">
+    <TextView
+        android:layout_width="266dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/bg_round"
-        android:text="Oximeter"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:text="BOOK LAB TEST"
+        android:textColor="#1B1D72"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textAllCaps="true" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Age"
+        app:startIconDrawable="@drawable/ic_baseline_account_box_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="number"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Number"
+        app:startIconDrawable="@drawable/ic_baseline_phone_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="phone"
+            android:maxLength="10"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Date"
+        app:startIconDrawable="@drawable/ic_baseline_edit_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:inputType="datetime"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btns"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/browser_actions_bg_grey"
+        android:text="Book Test"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/loads"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/browser_actions_bg_grey"
+        android:text="View Details"
+        android:textColor="@color/black" />
 
 
 </LinearLayout>

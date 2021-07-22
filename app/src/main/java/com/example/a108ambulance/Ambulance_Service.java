@@ -27,8 +27,6 @@ public class Ambulance_Service extends AppCompatActivity {
     TextInputLayout num,add;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    PatientDetails patientDetails;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,20 +36,16 @@ public class Ambulance_Service extends AppCompatActivity {
         add = findViewById(R.id.address);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Ambulance Service Patient details");
-        patientDetails = new PatientDetails();
 
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String num_holder = getIntent().getStringExtra("phoneNumber");
+                String num_holder = "+91"+num.getEditText().getText().toString();
                 String add_holder = add.getEditText().getText().toString();
-                String phone_number ="8309295163";
+
                 if (TextUtils.isEmpty(num_holder) && TextUtils.isEmpty(add_holder)) {
                     Toast.makeText(Ambulance_Service.this, "Please Enter Number and Address", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent phone_intent = new Intent(Intent.ACTION_CALL);
-                    phone_intent.setData(Uri.parse("tel:" + phone_number));
-                    startActivity(phone_intent);
                     addDatatoFirebase(num_holder, add_holder);
                 }
 
@@ -60,14 +54,16 @@ public class Ambulance_Service extends AppCompatActivity {
 
     }
     private void addDatatoFirebase(String number, String address) {
-        patientDetails.setNumber(number);
-        patientDetails.setAddress(address);
+        PatientDetails patientDetails = new PatientDetails(number,address);
+        String phone_number ="8309295163";
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                databaseReference.orderByChild("phoneNumber").equalTo(number);
-                databaseReference.child(number).child("Address").setValue(address);
+                databaseReference.child(number).setValue(patientDetails);
                 Toast.makeText(Ambulance_Service.this, "Calling....", Toast.LENGTH_SHORT).show();
+                Intent phone_intent = new Intent(Intent.ACTION_CALL);
+                phone_intent.setData(Uri.parse("tel:" + phone_number));
+                startActivity(phone_intent);
             }
 
             @Override

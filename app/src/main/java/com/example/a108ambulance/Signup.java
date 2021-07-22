@@ -189,7 +189,7 @@ public class Signup extends AppCompatActivity {
         intent.putExtra("email",email);
         intent.putExtra("password",password);
         intent.putExtra("gender",selected_gender);
-
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 

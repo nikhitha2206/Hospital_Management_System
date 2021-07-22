@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -24,37 +25,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.108Ambulance"
         tools:node="merge">
-        <activity android:name=".RecoverPassword"></activity>
-        <activity android:name=".ForgetPasswordSuccessMessage" />
-        <activity android:name=".SetNewPassword" />
-        <activity android:name=".Forgot_password" />
-        <activity android:name=".Ambulance_Service" />
-        <activity android:name=".GoogleAuthentication" />
+        <activity android:name=".ViewLabTests"></activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".MedicineReminder" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".OtpVerification" />
+        <activity android:name=".Ambulance_Service" />
+        <activity android:name=".MainActivity4" />
+        <activity android:name=".BottomNavigation" />
+        <activity android:name=".Third_Page">
+
+        </activity>
+        <activity android:name=".SecondPage" />
+        <activity android:name=".appointments" />
+        <activity android:name=".viewappointments" />
+        <activity android:name=".ap" />
         <activity android:name=".Signup" />
-        <activity android:name=".Login">
+        <activity android:name=".DrLoginPage" />
+        <activity android:name=".Login" />
+        <activity android:name=".welcome" />
+        <activity android:name=".Forgot_password"/>
+        <activity android:name=".RecoverPassword"/>
+        <activity android:name=".SetNewPassword"/>
+        <activity android:name=".ForgetPasswordSuccessMessage"/>
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".Welcome"
-            android:label="@string/title_activity_welcome"
-            android:screenOrientation="fullSensor" />
-        <activity android:name=".ImportingImage" />
     </application>
 
 </manifest>

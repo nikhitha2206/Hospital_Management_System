@@ -78,7 +78,7 @@ public class OtpVerification extends AppCompatActivity {
                 if (task.isSuccessful()) {
 
                             StoreUserData();
-                            Intent intent = new Intent(OtpVerification.this, Ambulance_Service.class);
+                            Intent intent = new Intent(OtpVerification.this, BottomNavigation.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                             finish();
